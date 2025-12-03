@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuraWeather | Premium Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-container">
+        <div class="particles"></div>
+        <div class="gradient-overlay"></div>
+    </div>
+    
+    <div class="container">
+        <header class="app-header">
+            <h1>NeuraWeather</h1>
+            <div class="search-container">
+                <input type="text" id="city-input" placeholder="Search for a city...">
+                <button id="search-btn">→</button>
+            </div>
+        </header>
+        
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="section hero-section active" id="hero-section">
+                <div class="weather-card hero-card" id="hero-card">
+                    <div class="location-info">
+                        <h2 id="city-name">City, Country</h2>
+                        <p id="date">Loading date...</p>
+                    </div>
+                    
+                    <div class="weather-main">
+                        <div class="weather-icon-container">
+                            <img id="weather-icon" src="" alt="Weather Icon">
+                        </div>
+                        <div class="temperature-container">
+                            <span id="temp-value">0</span>
+                            <span class="unit">°C</span>
+                        </div>
+                        <p id="weather-condition">Loading condition...</p>
+                    </div>
+                    
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <span>Humidity</span>
+                            <span id="humidity">0%</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>Wind</span>
+                            <span id="wind-speed">0 km/h</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- AQI Section -->
+            <section class="section aqi-section" id="aqi-section">
+                <h3>Air Quality Index</h3>
+                <div class="aqi-card">
+                    <div class="aqi-value-container">
+                        <span id="aqi-value">0</span>
+                        <span class="aqi-label" id="aqi-label">Good</span>
+                    </div>
+                    <p class="aqi-advice" id="aqi-advice">Loading AQI data...</p>
+                </div>
+            </section>
+            
+            <!-- Forecast Section -->
+            <section class="section forecast-section" id="forecast-section">
+                <h3>5-Day Forecast</h3>
+                <div class="forecast-container">
+                    <div class="forecast-scroll-container">
+                        <div class="forecast-day" id="forecast-day-1">
+                            <span class="day">Mon</span>
+                            <img class="forecast-icon" src="" alt="Forecast Icon">
+                            <span class="forecast-temp">0°C</span>
+                        </div>
+                        <div class="forecast-day" id="forecast-day-2">
+                            <span class="day">Tue</span>
+                            <img class="forecast-icon" src="" alt="Forecast Icon">
+                            <span class="forecast-temp">0°C</span>
+                        </div>
+                        <div class="forecast-day" id="forecast-day-3">
+                            <span class="day">Wed</span>
+                            <img class="forecast-icon" src="" alt="Forecast Icon">
+                            <span class="forecast-temp">0°C</span>
+                        </div>
+                        <div class="forecast-day" id="forecast-day-4">
+                            <span class="day">Thu</span>
+                            <img class="forecast-icon" src="" alt="Forecast Icon">
+                            <span class="forecast-temp">0°C</span>
+                        </div>
+                        <div class="forecast-day" id="forecast-day-5">
+                            <span class="day">Fri</span>
+                            <img class="forecast-icon" src="" alt="Forecast Icon">
+                            <span class="forecast-temp">0°C</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Sunrise/Sunset Section -->
+            <section class="section sun-section" id="sun-section">
+                <h3>Sunrise & Sunset</h3>
+                <div class="sun-card">
+                    <div class="sun-timeline-container">
+                        <div class="time-labels">
+                            <span id="sunrise-time">06:00 AM</span>
+                            <span id="sunset-time">08:00 PM</span>
+                        </div>
+                        <div class="timeline-bar">
+                            <div class="timeline-progress" id="timeline-progress"></div>
+                            <div class="sun-position" id="sun-position">☀️</div>
+                        </div>
+                        <div class="day-length">
+                            Daylight: <span id="day-length">14h 0m</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Suggestions Section -->
+            <section class="section suggestions-section" id="suggestions-section">
+                <h3>Recommendations</h3>
+                <div class="suggestions-grid">
+                    <div class="suggestion-card">
+                        <h4>Clothing</h4>
+                        <p id="clothing-suggestion">Loading suggestions...</p>
+                    </div>
+                    <div class="suggestion-card">
+                        <h4>Activities</h4>
+                        <p id="activity-suggestion">Loading suggestions...</p>
+                    </div>
+                    <div class="suggestion-card">
+                        <h4>Health</h4>
+                        <p id="health-suggestion">Loading suggestions...</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <div id="loading" class="loading-screen">
+        <div class="loading-content">
+            <div class="weather-icon-placeholder"></div>
+            <p>Loading weather data...</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
